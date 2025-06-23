@@ -4,122 +4,105 @@
   <title>Hrishikesh Nate - Cyber Sentinel</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hrishikesh Nate's interactive hacker-style security portfolio" />
+  <meta name="description" content="Hrishikesh Nate's Security portfolio" />
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #39ff14;
-      font-family: 'VT323', monospace;
-      font-size: 18px;
-    }
-    header {
-      background-color: #111;
-      border-bottom: 2px dashed #39ff14;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 48px;
-    }
-    nav {
-      text-align: center;
-      background: #111;
-      padding: 10px;
-    }
-    nav a {
-      color: #39ff14;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    .terminal-box {
-      background: #111;
-      border: 2px solid #39ff14;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 20px #39ff1460;
-    }
-    .prompt {
-      color: #39ff14;
-    }
-    .highlight {
-      color: #00f5d4;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 2px dashed #39ff14;
-    }
-  </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Matrix rain background -->
+  <canvas class="matrix-bg" id="matrix"></canvas>
+
   <header>
-    <h1>hrishikeshnate@root:~$ <span class="highlight">procrast19</span></h1>
-    <p>Interactive Security Portfolio</p>
+    <h1>hrishikeshnate@root:~$ <span class="highlight">procrast19</span><span class="cursor">█</span></h1>
+    <p class="typewriter">Interactive Security Portfolio</p>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#certs">Certifications</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" onclick="scrollToSection(event, 'about')">About</a>
+    <a href="#skills" onclick="scrollToSection(event, 'skills')">Skills</a>
+    <a href="#experience" onclick="scrollToSection(event, 'experience')">Experience</a>
+    <a href="#certs" onclick="scrollToSection(event, 'certs')">Certifications</a>
+    <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
+    <a href="#" onclick="toggleEasterEgg(event)" title="Press Ctrl+` for terminal">🔒</a>
   </nav>
 
   <section>
     <div class="terminal-box" id="about">
-      <div class="prompt">> whoami</div>
+      <div class="prompt">> whoami<span class="cursor">█</span></div>
       <p class="highlight">Cybersecurity researcher | Automator | API guardian | DevSecOps advocate</p>
+      <div class="prompt">> cat bio.txt</div>
+      <p>Passionate about securing digital infrastructures and automating security workflows. Specializing in application security, penetration testing, and DevSecOps implementations.</p>
     </div>
 
     <div class="terminal-box" id="skills">
-      <div class="prompt">> cat skills.txt</div>
+      <div class="prompt">> cat skills.txt<span class="cursor">█</span></div>
       <ul>
-        <li>Scripts & Spells: Bash, Python, Java</li>
-        <li>Defense Tactics:  Penetration Testing, DAST, SAST, VA </li>
-        <li>Warlock: API Security, DevSecOps, Threat Modeling</li>
-        <li>Toolchain: Docker, Kubernetes, AWS</li>
+        <li><strong>Scripts & Spells:</strong> Bash, Python, Java</li>
+        <li><strong>Defense Tactics:</strong> Penetration Testing, DAST, SAST, VA</li>
+        <li><strong>Warlock:</strong> API Security, DevSecOps, Threat Modeling</li>
+        <li><strong>Toolchain:</strong> Docker, Kubernetes, AWS</li>
+        <li><strong>Arsenal:</strong> Burp Suite, OWASP ZAP, Nessus, Metasploit</li>
       </ul>
     </div>
 
     <div class="terminal-box" id="experience">
-      <div class="prompt">> ls experience/</div>
+      <div class="prompt">> ls -la experience/<span class="cursor">█</span></div>
       <ul>
-        <li><strong>TIAA</strong>: Application Security Specialist - Secure defaults & automation</li>
-        <li><strong>Paytm</strong>: Senior Security Engineer - SAST, DAST, tool dev</li>
-        <li><strong>Justdial</strong>: Pentesting & automation scripting</li>
+        <li><strong>TIAA</strong> - Application Security Specialist<br>
+            <span class="highlight">→ Implemented secure defaults & automation frameworks</span></li>
+        <li><strong>Paytm</strong> - Senior Security Engineer<br>
+            <span class="highlight">→ SAST/DAST integration, custom tool development</span></li>
+        <li><strong>Justdial</strong> - Security Engineer<br>
+            <span class="highlight">→ Penetration testing & automation scripting</span></li>
       </ul>
     </div>
 
     <div class="terminal-box" id="certs">
-      <div class="prompt">> grep -i certified resume.pdf</div>
+      <div class="prompt">> grep -i certified credentials.db<span class="cursor">█</span></div>
       <ul>
-        <li>✔️ CKS - Certified Kubernetes Security Specialist</li>
-        <li>✔️ CKA - Certified Kubernetes Administrator</li>
-        <li>✔️ Certified Ethical Hacker v10 | Certified Network Security Specialist | Certified Red Team Professional </li>
+        <li>✅ <strong>CKS</strong> - Certified Kubernetes Security Specialist</li>
+        <li>✅ <strong>CKA</strong> - Certified Kubernetes Administrator</li>
+        <li>✅ <strong>CEH v10</strong> - Certified Ethical Hacker</li>
+        <li>✅ <strong>CNSS</strong> - Certified Network Security Specialist</li>
+        <li>✅ <strong>CRTP</strong> - Certified Red Team Professional</li>
       </ul>
     </div>
 
     <div class="terminal-box" id="contact">
-      <div class="prompt">> echo "Let's connect"</div>
+      <div class="prompt">> echo "Let's connect && collaborate"<span class="cursor">█</span></div>
       <p><a href="mailto:ihrishikeshnate@gmail.com">📧 ihrishikeshnate@gmail.com</a></p>
-      <p><a href="https://github.com/ihrishikesh0896" target="_blank">💻 GitHub</a> | <a href="https://linkedin.com/in/hrishikesh-n" target="_blank">🔗 LinkedIn</a></p>
+      <p>
+        <a href="https://github.com/ihrishikesh0896" target="_blank">💻 GitHub</a>
+        <a href="https://linkedin.com/in/hrishikesh-n" target="_blank">🔗 LinkedIn</a>
+      </p>
       <p><a href="Hrishikesh-Nate-Application-Security-Resume.pdf" target="_blank">📄 Download Resume</a></p>
+      <div class="prompt" style="margin-top: 20px;">> uptime</div>
+      <p class="highlight" id="uptime">Available for new opportunities</p>
     </div>
   </section>
 
+  <!-- Hidden Terminal Easter Egg -->
+  <div class="hidden-terminal" id="hiddenTerminal">
+    <div class="prompt">root@portfolio:~# <span class="cursor">█</span></div>
+    <div id="terminalOutput"></div>
+    <div class="prompt">root@portfolio:~# <input type="text" class="terminal-input" id="terminalInput" placeholder="Try: help, whoami, skills, clear"></div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-left">
+      <span>SECURE CONNECTION ESTABLISHED</span> |
+      <span id="visitors">👁️ MONITORING ACTIVE</span>
+    </div>
+    <div class="status-right">
+      <span id="currentTime"></span>
+    </div>
+  </div>
+
   <footer>
-    <p>~/hrishikesh_nate &copy; 2025 | Terminal themed portfolio | VT323 powered</p>
+    <p>~/hrishikesh_nate &copy; 2025 | <span class="highlight">HACK THE PLANET</span> | VT323 powered</p>
   </footer>
+  <script src="assets/js/matrix.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
