@@ -1,320 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hrishikesh Nate - Security Researcher</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Security Researcher with 6+ years of experience. Passionate about security, automation, and technology.">
-  <meta name="keywords" content="Hrishikesh, Hrishikesh Nate, Security Researcher, Application Security, Linux, Python, Bash, Cybersecurity">
-  <meta name="author" content="Hrishikesh Nate">
-  <link rel="icon" href="images/men.gif" type="image/x-icon">
-
-  <!-- Fonts and Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6a4bc3990d.js" crossorigin="anonymous"></script>
-  
+  <title>Hrishikesh Nate - Cyber Sentinel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hrishikesh Nate's interactive hacker-style security portfolio" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <style>
-    html, body, h1, h2, h3, h4, h5, h6 {
-      font-family: 'Fira Code', 'Source Code Pro', monospace;
-    }
     body {
       margin: 0;
-      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-      color: #cfd8dc;
+      background: #000;
+      color: #39ff14;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
     }
-    .w3-card, .w3-white {
-      background-color: #1a1a1a;
-      box-shadow: 0px 0px 15px 2px #00ffe5;
-      border: 1px solid #00ffe5;
+    header {
+      background-color: #111;
+      border-bottom: 2px dashed #39ff14;
+      padding: 20px;
+      text-align: center;
     }
-    .w3-button {
-      background: #00e676;
-      color: #0d0d0d;
-      font-weight: bold;
-      box-shadow: 0px 0px 10px 1px #00e676;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+    h1 {
+      margin: 0;
+      font-size: 48px;
     }
-    .w3-button:hover {
-      background: #00c853;
-      box-shadow: 0px 0px 20px 2px #00c853;
+    nav {
+      text-align: center;
+      background: #111;
+      padding: 10px;
     }
-    .footer-icons {
-      font-size: 24px;
-      margin: 0 10px;
-      color: #00ff00;
+    nav a {
+      color: #39ff14;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .terminal-box {
+      background: #111;
+      border: 2px solid #39ff14;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px #39ff1460;
+    }
+    .prompt {
+      color: #39ff14;
+    }
+    .highlight {
+      color: #00f5d4;
     }
     footer {
-      background-color: #0d0d0d;
-      color: #00ff00;
-      font-family: 'Source Code Pro', monospace;
-      font-size: 14px;
-      letter-spacing: 1px;
-      padding-bottom: 40px;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px dashed #39ff14;
     }
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 40px;
-      right: 30px;
-      z-index: 99;
-      font-size: 18px;
-      padding: 10px;
-      border-radius: 10px;
-    }
-    .dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1.25rem;
-  background: #101010;
-  border-bottom: 1px solid #00ffe5;
-  box-shadow: 0 0 5px #00ffe5;
-  font-family: 'Fira Code', monospace;
-}
-
-.clock {
-  color: #00ffe5;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.status-badge {
-  color: #00ff00;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 4px 12px;
-  border-radius: 8px;
-  background: rgba(0, 255, 0, 0.1);
-  box-shadow: 0 0 6px #00ff00;
-  animation: pulse 2s infinite;
-}
-
-.toggle-btn {
-  background: #00e676;
-  color: #000;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0 0 8px #00e676;
-}
-.toggle-btn:hover {
-  background: #00c853;
-  box-shadow: 0 0 12px #00c853;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 6px #00ff00; }
-  50% { box-shadow: 0 0 12px #00ff00; }
-  100% { box-shadow: 0 0 6px #00ff00; }
-}
-
-
-
   </style>
-
 </head>
-
 <body>
+  <header>
+    <h1>hrishikeshnate@root:~$ <span class="highlight">procrast19</span></h1>
+    <p>Interactive Security Portfolio</p>
+  </header>
 
-<!-- Sleek Hacker Dashboard -->
-<div class="dashboard-header">
-	<div class="clock" id="clock">--:--:--</div>
-	<div class="status-badge">👾 Procrastinator's Profile</div>
-	<button onclick="toggleDarkMode()" class="toggle-btn">🌙 Dark Mode</button>
-  </div>
-  
-  
-  
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certs">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-  <div class="w3-row-padding">
-
-    <!-- Left Column -->
-    <div class="w3-third">
-      <div class="w3-card w3-white">
-        <div class="w3-display-container" data-aos="fade-up">
-          <img src="images/men.gif" style="width:100%" alt="Hrishikesh Nate">
-          <div class="w3-display-bottomleft w3-container w3-text-white">
-            <h2>Hrishikesh Nate</h2>
-          </div>
-        </div>
-        <div class="w3-container" data-aos="fade-up">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right"></i> Security Researcher</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right"></i> Mumbai, India</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right"></i> <a href="mailto:ihrishikeshnate@gmail.com">ihrishikeshnate@gmail.com</a></p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right"></i> <a href="tel:+918097108406">+91 8097108406</a></p>
-          <hr>
-          <p><b>Skills</b></p>
-          <ul>
-            <li>Linux, Unix, Windows</li>
-            <li>Bash, Python, Javascript, PHP</li>
-            <li>Postgres, Flask</li>
-          </ul>
-          <hr>
-          <p><b>Certifications</b></p>
-          <ul>
-            <li  onclick="location.href='https://www.credly.com/badges/9231d166-4ad6-4af4-8a44-05236f78997b/public_url';"> CKS: Certified Kubernetes Security Specialist.</li>
-            <li onclick="location.href='https://www.credly.com/badges/b886dee6-a596-42a7-8dd3-278ba2cb8f1c';"> CKA: Certified Kubernetes Administrator.</li>
-            <li onclick="location.href='https://images.credential.net/embed/k23m6kls.png';"> Altered Security - CRTP.</li>
-            <li onclick="location.href='https://www.credential.net/0e3f1990-aa02-466e-9a66-f6fbf11984b3?username=hrishikeshnate424081#gs.dzr2g7';"> EC-Council: - CEH V10.</li>
-            <li onclick="location.href='https://www.credential.net/d1ba0816-1383-4b25-93c0-5d2117a5163d#gs.dzr4j0';"> ICSI | CNSS Certified Network Security Specialist.</li>
-            <li> CCNA Routing & Switching.</li>
-            <li> CCNP Security (ASA).</li>
-            <li> Microcontroller 8051Key skills.</li>
-          </ul>
-          <hr>
-          <p><b>Technical Proficiency</b></p>
-          <ul>
-            <li>Penetration Testing (Web/API/Android)</li>
-            <li>VAPT, Networking, Automation</li>
-            <li>Scripting, Security Automation</li>
-          </ul>
-          <br>
-          <center>
-            <a href="Hrishikesh-Nate-Application-Security-Resume.pdf" target="_blank" class="w3-button w3-round-large">📄 Download Resume</a>
-          </center>
-          <br>
-        </div>
-      </div><br>
+  <section>
+    <div class="terminal-box" id="about">
+      <div class="prompt">> whoami</div>
+      <p class="highlight">Cybersecurity researcher | Automator | API guardian | DevSecOps advocate</p>
     </div>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" data-aos="fade-up">
-        <h2><i class="fa fa-user fa-fw w3-margin-right"></i> About Me</h2>
-        <p>Engineer passionate about automation, cybersecurity, and building efficient systems. Focused on security research, automation scripting, and proactive defense.</p>
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" data-aos="fade-up">
-        <h2><i class="fa fa-suitcase fa-fw w3-margin-right"></i> Work Experience</h2>
-        <h5><b>TIAA</b> - Application Security Specialist</h5>
-              <p>  • API Security testing.</p>
-							<p>  • Web Application Security Testing.</p>
-							<p>  • SAST (Checkmarx).</p>
-							<p>  • Automation and scripting for optimization and eliminating repetitive processes.</p>
-							<strong>Achievements:</strong>
-							<p>  • Developing a security reconnaissance framework for API security testing, equipped to perform authenticated scans and maintain an active inventory.</p>
-							<p>  • Developed software solutions in Python at an Enterprise scale (crypto-utilities for encryption/decryption)</p>
-							<p>  • Fine-tuned Traceable.ai to significantly reduce false positives in reporting application vulnerabilities.</p>
-        <hr>
-        <h5><b>Paytm</b> - Senior Security Engineer</h5>
-        <p>  • DAST Assessment.</p>
-							<p>  • SAST Assessment (Analyze source code of findings reported by SAST tools and eliminate false positives.)</p>
-							<p>  • API Pen Testing. </p>
-							<p>  • Vulnerability Assessment & Penetration Testing for Internal and External Network.</p>
-							<p>  • Automating Daily Tasks & Scripting to make test cases automated.</p>
-
-							<strong>Achievements:</strong>
-							<p>  • Developed a tool leveraging AWS Route 53 data, conducting comparative analysis, and performing proactive scans to provide valuable insights for efficient management of AWS environments.</p>
-							<p>  • Successfully designed and deployed a production-ready file-share portal, enabling secure file sharing and centralized logging while meeting stringent security and audit requirements.</p>
-							<p>  • Created the "Github Crawler," a powerful tool that bypasses GitHub API rate limits, enabling quick and efficient search for code snippets, repositories, and other information on GitHub.</p>
-							<p>  • Designed and developed an open-source Jira dashboard that integrates ticket data, offering comprehensive analytics and duration metrics to optimize workflows and improve productivity.</p>
-							<p>  • Developed the homegrown product "Spyonic," integrating multiple open-source bug bounty tools to proactively identify and remediate security misconfigurations, reducing the risk of successful attacks.</p>
-							<p>  • Designed and developed a Slack app for S3 security self-assessment, automating domain input and checks for default paths and custom wordlists, ensuring proper security measures for S3 buckets.</p>
-							<p>  • Implemented an automated process that retrieves and matches the latest CVEs using OpenCVE API and Qualys scripts, enabling organizations to proactively identify and address vulnerabilities before exploitation occurs.</p>
-        <hr>
-        <h5><b>Maharashtra Cyber Nodal Office</b> - Cyber Consultant</h5>
-              <p>  • Tested government websites for vulnerabilities and reported to the respective authorities
-                with appropriate optimal solution for the same.</p>
-              <p>  • Developed an OSINT Tool called OsintORK for ease in digital investigation for authorities and
-                help fraud online traces of reformation regarding the subject of the case. </p>
-              <p>  • DarkWeb Deep monitoring.</p>
-              <p>  • Collected requirements as per department needs and developed Social Media Monitoring Web
-                Application for collecting complaints regarding offensive posts. </p>
-              <p>  • Included modules to generated automated letters/ reports/notices based on actions taken by
-                the respective authority and dynamically change content as per the sections of India Penal
-                Court criminal procedure code and IT Act. </p>
-              <p>  • Automating and Optimizing Infrastructural work.</p>
-
-        <hr>
-        <h5><b>Justdial</b> - Senior Security Executive</h5>
-        <p>  •  Web Application Penetration Testing.</p>
-						<p>  •  API Penetration Testing.</p>
-						<p>  •  Android Penetration Testing.</p>
-						<p>  •  Vulnerability Assessment & Penetration Testing for Internal and External Network.</p>
-						<p>  •  Monitored use of data files and regulated access to protect secure information.</p>
-						<p>  •  Monitored computer virus reports to determine when to update virus protection
-							systems (Quarterly VA-PT)</p>
-						<p>  •  Conducted penetration testing and located vulnerabilities in systems before they could
-							be exploited.</p>
-						<p>  •  Monitored organization’s networks for security breaches and investigated violations.</p>
-						<p>  •  Expertise in security policies.</p>
-						<p>  •  Expert in Automation Scripts.</p>
-						<strong>Achievements:</strong>
-						<p>  •  Automated whole IP Blocking and Releasing process.</p>
-						<p>  •  Implementation of Rules on basis of Crawling behavior.</p>
-      </div>
-
-      <div class="w3-container w3-card w3-white" data-aos="fade-up">
-        <h2><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i> Education</h2>
-        <h5><b>Padmabhushan Vasantdada Patil Pratishthan's COE</b></h5>
-        <p>Bachelor's in Electronics and Telecommunication Engineering</p>
-        <hr>
-        <h5><b>Bhavans College</b></h5>
-        <p>Higher Secondary Certificate</p>
-      </div>
-
+    <div class="terminal-box" id="skills">
+      <div class="prompt">> cat skills.txt</div>
+      <ul>
+        <li>Scripts & Spells: Bash, Python, Java</li>
+        <li>Defense Tactics:  Penetration Testing, DAST, SAST, VA </li>
+        <li>Warlock: API Security, DevSecOps, Threat Modeling</li>
+        <li>Toolchain: Docker, Kubernetes, AWS</li>
+      </ul>
     </div>
 
-  </div>
-</div>
+    <div class="terminal-box" id="experience">
+      <div class="prompt">> ls experience/</div>
+      <ul>
+        <li><strong>TIAA</strong>: Application Security Specialist - Secure defaults & automation</li>
+        <li><strong>Paytm</strong>: Senior Security Engineer - SAST, DAST, tool dev</li>
+        <li><strong>Justdial</strong>: Pentesting & automation scripting</li>
+      </ul>
+    </div>
 
-<!-- Footer -->
-<footer class="w3-center">
-  <p>• Be Social With Me •</p>
-  <a href="https://www.facebook.com/ihrishikeshnate/" target="_blank"><i class="fab fa-facebook footer-icons"></i></a>
-  <a href="https://www.instagram.com/ihrishikesh0896/" target="_blank"><i class="fab fa-instagram footer-icons"></i></a>
-  <a href="https://twitter.com/hrishikesh_nate" target="_blank"><i class="fab fa-twitter footer-icons"></i></a>
-  <a href="https://www.linkedin.com/in/hrishikesh-n" target="_blank"><i class="fab fa-linkedin footer-icons"></i></a>
-  <a href="https://ihrishikeshnate.medium.com" target="_blank"><i class="fab fa-medium footer-icons"></i></a>
-  <a href="https://github.com/ihrishikesh0896" target="_blank"><i class="fab fa-github footer-icons"></i></a>
-  <a href="https://wa.me/918097108406" target="_blank"><i class="fab fa-whatsapp footer-icons"></i></a>
-</footer>
+    <div class="terminal-box" id="certs">
+      <div class="prompt">> grep -i certified resume.pdf</div>
+      <ul>
+        <li>✔️ CKS - Certified Kubernetes Security Specialist</li>
+        <li>✔️ CKA - Certified Kubernetes Administrator</li>
+        <li>✔️ Certified Ethical Hacker v10 | Certified Network Security Specialist | Certified Red Team Professional </li>
+      </ul>
+    </div>
 
-<!-- Top Button -->
-<button onclick="topFunction()" id="topBtn" class="w3-button w3-black w3-round-large">⬆️ Top</button>
+    <div class="terminal-box" id="contact">
+      <div class="prompt">> echo "Let's connect"</div>
+      <p><a href="mailto:ihrishikeshnate@gmail.com">📧 ihrishikeshnate@gmail.com</a></p>
+      <p><a href="https://github.com/ihrishikesh0896" target="_blank">💻 GitHub</a> | <a href="https://linkedin.com/in/hrishikesh-n" target="_blank">🔗 LinkedIn</a></p>
+      <p><a href="Hrishikesh-Nate-Application-Security-Resume.pdf" target="_blank">📄 Download Resume</a></p>
+    </div>
+  </section>
 
-<!-- Scripts -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-  }
-  var mybutton = document.getElementById("topBtn");
-  window.onscroll = function() { scrollFunction(); };
-  function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-</script>
-<script>
-	function updateClock() {
-	  const now = new Date();
-	  const time = now.toLocaleTimeString();
-	  document.getElementById('clock').textContent = time;
-	}
-	setInterval(updateClock, 1000);
-	updateClock();
-	</script>
-	
-  
-
+  <footer>
+    <p>~/hrishikesh_nate &copy; 2025 | Terminal themed portfolio | VT323 powered</p>
+  </footer>
 </body>
 </html>
